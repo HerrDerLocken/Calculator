@@ -49,10 +49,10 @@ class Calculator(tk.Tk):
         # Scientific frame (hidden initially)
         self.science_frame = ttk.Frame(self)
         sci_buttons = [
-            ["sqrt", "root", "factorial", "abs", "pi"],
+            ["sqrt", "root", "!", "abs", "pi"],
             ["sin", "cos", "tan", "asin", "acos"],
             ["atan", "log", "ln", "e", "deg"],
-            ["rad", "pow", "^", "ANS", "BACK"]
+            [ "pow", "^","=", "ANS", "BACK"]
         ]
 
         for r, row in enumerate(sci_buttons):
@@ -117,7 +117,7 @@ class Calculator(tk.Tk):
             self.expr += "root("
         elif char == "pow":
             self.expr += "pow("
-        elif char == "factorial":
+        elif char == "!":
             self.expr += "!"
         elif char == "^":
             self.expr += "^"
